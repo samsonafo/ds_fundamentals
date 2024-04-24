@@ -53,3 +53,49 @@ Two optimization algorithms (including human intelligence) are equivilant when t
 Choosing an appropriate algorithm requires **making assumptions** about the kinds of target functions the algorithm is being used for
 - same as building priors into a model (such as using convolution)
 - inductive bias
+
+
+
+
+- harder than splitting on whitespace!
+- ngrams
+- NLTK, SpaCy
+
+Word / doc embeddings
+- word to vec
+
+### Part of speech tagging with SpaCy
+
+A simplified form of this is commonly taught to school-age children, in the identification of words as nouns, verbs, adjectives, adverbs, etc.
+
+https://spacy.io/usage/linguistic-features
+
+https://spacy.io/api/token
+
+**Need to run**:
+```bash
+$ python -m spacy download en_core_web_sm
+```
+
+
+def find_ents(doc, verbose=False):
+    if verbose:
+        print(doc)
+        print('---')
+        
+    doc = nlp(doc)
+    ents = []
+    for token in doc:
+        
+        if verbose:
+            print({
+                'text': token.text,
+                'coarse POS': token.pos_,
+                'fine POS': token.tag_,
+                'syntatic dependency relation': token.dep_,
+                'stop': token.is_stop
+            })
+        if token.pos_ == 'PROPN':
+            ents.append(token)
+            
+    return doc, ents
