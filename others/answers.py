@@ -27,3 +27,10 @@ def stability_selection_rf_regressor(x, y, params, depths, straps=4, k=5):
     feature_scores.shape[0] == x.shape[1]
     best = feature_scores.argsort()[-k:][::-1]
     return x.columns[best]
+
+
+# ![Machine Learning](./images/3_page.jpg)
+
+# ![Example Dataset](./images/4_page.jpg)
+
+# ![Example Dataset](./images/5_page.jpg)
