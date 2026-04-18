@@ -1,0 +1,23 @@
+artifact_path: /Users/samson.afolabi/Documents/DSR/Data Science Fundamentals/DSR_DS_Fundamental/mlruns/1/models/m-d435eb904d6b493bb1b8f1cab1b77f5a/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.1
+    skops_trusted_types: null
+mlflow_version: 3.11.1
+model_id: m-d435eb904d6b493bb1b8f1cab1b77f5a
+model_size_bytes: 136862
+model_uuid: m-d435eb904d6b493bb1b8f1cab1b77f5a
+prompts: null
+run_id: ac14db315e494434b2be75d000caca00
+utc_time_created: '2026-04-17 14:31:10.708019'
